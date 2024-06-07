@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Temp Converter</title>
+    <style type="text/css">
+      body {
+        margin: 30px;
+        font-family: "Arial", sans-serif;
+      }
+
+      form {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin: 8px 0;
+      }
+
+      input[type="button"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="button"]:hover {
+        background-color: #45a049;
+      }
+
+      </style>
+  </head>
+  <body>
+    <h1>Temp Converter</h1>
+    <form>
+      Celsius : <input onchange="celsiusToFahrenheit()" type="text" id="celsius" /><br />
+      Fahrenheit: <input onchange="fahrenheitToCelsius()" type="text" id="fahrenheit" /><br />
+    </form>
+    <script>
+      function celsiusToFahrenheit() {
+        var celsius = document.getElementById("celsius").value;
+        var fahrenheit = (celsius * 9) / 5 + 32;
+        document.getElementById("fahrenheit").value = fahrenheit;
+      }
+
+      function fahrenheitToCelsius() {
+        var fahrenheit = document.getElementById("fahrenheit").value;
+        var celsius = ((fahrenheit - 32) * 5) / 9;
+        document.getElementById("celsius").value = celsius;
+      }
+    </script>
+  </body>
+</html>

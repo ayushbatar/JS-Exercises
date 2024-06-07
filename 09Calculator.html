@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      JavaScript program to calculate multiplication and division of two numbers
+    </title>
+    <style type="text/css">
+      body {
+        margin: 30px;
+        font-family: "Arial", sans-serif;
+      }
+
+      form {
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        padding: 6px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin: 8px 0;
+      }
+
+      input[type="button"] {
+        background-color: #4caf50;
+        color: white;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="button"]:hover {
+        background-color: #45a049;
+      }
+
+      p {
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 20px;
+      }
+
+      </style>
+
+  </head>
+  <body>
+    <form>
+      1st Number : <input type="text" id="firstNumber" /><br />
+      2nd Number: <input type="text" id="secondNumber" /><br />
+      <input type="button" onClick="multiplyBy()" value="Multiply" />
+      <input type="button" onClick="divideBy()" value="Divide" />
+    </form>
+    <p>
+      The Result is :
+      <span id="result"></span>
+    </p>
+
+    <script>
+        var firstNumber = document.getElementById("firstNumber");
+        var secondNumber = document.getElementById("secondNumber");
+
+        function multiplyBy() {
+            var result = parseInt(firstNumber.value) * parseInt(secondNumber.value);
+            document.getElementById("result").innerHTML = result;
+        }
+
+        function divideBy() {
+            var result = parseInt(firstNumber.value) / parseInt(secondNumber.value);
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+  </body>
+</html>
