@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area Calculator</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <h1>Area Calculator</h1>
+    <input type="text">
+    <button>Calculate Area</button>
+    
+    <script>
+        const a = 5;
+        const b = 6;
+        const c = 7;
+
+        const s = (a+b+c)/2;
+        const steps = (s*(s - a) * (s - b) * (s - c));
+        const area = Math.sqrt(steps)
+        console.log(area);
+    </script>
+</body>
+</html>
+
+
+
